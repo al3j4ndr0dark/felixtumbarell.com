@@ -1,0 +1,94 @@
+/* Global Styles */
+* {
+	box-sizing:border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Helvetica Neue', sans-serif;
+	align-content: inherit;
+	align-content: initial;
+	align-content: unset;
+	
+}
+
+body {
+	margin: 0px;
+	padding: 0;
+	display: block;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: black;
+	font-size: 16px;
+	line-height: ;
+    overflow-x: ;
+	overflow: ;
+	/*background: -webkit-canvas(canvas); 
+	width: 100%;
+	height: auto;	
+	border: ;*/
+	
+	
+}
+
+:root{
+	--typewriterSpeed: 6s;  
+	--typerwritersCharacters: 11;
+	--backgroundcolor: #000000;
+	--animationspeed: 2s;
+	--colorTitle: var(--color1) ; 
+	--transparentbg: #202e3200; 
+
+	--color1:#dfdcb9; 
+	--color2:#586c5c; 
+
+		
+}
+
+header{
+	top: ;
+	align-items: center;
+	
+	
+	
+	/*background: linear-gradient(black, red);*/
+}
+
+
+canvas {
+	margin: 0;
+	padding: 0;
+	position: sticky;
+	width: 100%;
+	height: 100%;
+	display: ;
+	z-index: 0;
+	top: ;
+	background: transparent;
+	
+}
+
+li{
+	display: inline;
+	margin: 1em;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+.holder{
+	width: 100%;
+	align-items: center;
+	text-align: center;
+	vertical-align: center;
+	border: none /*red*/ ;
+	height: 100%;
+	position: relative ;
+	margin-top: -15%;
+
+}
+
+.page2{
+	width: 100%;
+	height: 100%;
+	background-color: var(--backgroundcolor);
+	color: var(--color1);
+}
