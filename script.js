@@ -35,8 +35,7 @@ animateTitle();
 
 /* the typing effect */
 
-
-      
+   
 
 
 

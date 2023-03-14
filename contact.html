@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Felix Tumbarell</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<style>
+    .header{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: ;
+        background-image:var(--bgimagerandom) ;
+    
+    }
+
+        .user{
+            position: absolute;
+            top: 15em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;		
+            align-items: center;
+            text-align: center;
+            color: aliceblue;
+            text-align: center;
+      
+        }
+
+            #user{
+                height: 200px;
+                width: 200px;
+                background-color:#ecd799 ;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: var(--myimage);
+            
+    
+            }
+
+            .nombre{
+                margin-top: 0.5em;
+                font-weight: 300;
+
+
+            }
+                    
+                .data{
+                    letter-spacing: 0.1em;
+                    font-weight: 300;
+                    display: none;
+                }
+
+            .form{
+                height: 30px;
+                border-radius: 30px;           
+                
+                box-shadow: none;
+                border: 1px solid var(--color1);
+                display:flex;
+                flex-direction:row;
+                
+
+            }
+                .form:hover{
+                        
+                        border: none;
+                        background-color: var(--color1trans);
+
+                    }
+                .form:focus{
+                    border: none;
+                }
+                #personname:focus + .bgo{
+                    display: block;
+                    
+                }
+
+                #personname:focus + {
+                    display: block;
+                    
+                }
+
+                @keyframes form2 () {
+                    to {
+                        opacity: 1;
+                    }
+                }
+
+                    #personname, #personmessage, .bgo{
+                    border-radius: 30px;
+                    text-align: center;
+                    background-color: var(--transparentbg);
+                    border:  none;
+                    color: var(--color1);
+                    	
+                }
+                        #personname, #personmessage, .bgo:focus-within{
+                            border: none;
+                            outline: none;
+                        }
+                       
+                        #personname:hover,#personmessage:hover{
+                            color: var(--transparentbg);
+
+                        }
+
+                        
+                    .bgo{
+                        width: 30px;
+                        height: 30px;
+                        padding: 5px;
+                        vertical-align: center;
+                        background-color: var(--color1);
+                        color: var(--backgroundcolor);
+                        display: none;
+                    }
+                        .bgo:hover{
+                            background-color: var(--transparentbg);
+                        }
+                        
+
+</style>
+
+ <!-- https://drive.google.com/file/d/1Xkh9exFVNcXFxDT_6i3rkOenDlJCNcld/view?usp=sharing-->
+
+
+
+ <body>
+    <header>
+        <div class="header"> 
+			<div id="menu">
+				<ul class="menu" style="color:var(--colorTitle) ;">
+					<li><a href="html.htm">Home</a></li>
+					<li>Studio</li>
+					<li ><a href="contact.html"> Contact</a></li>
+					<!--<li class="">Contact</li>-->
+				</ul>
+			</div>
+
+            <div class="user">
+
+                <div id="user" style=""> </div>
+
+                <h2 class="nombre">Felix Tumbarell</h2><br>
+
+                <p class="data" style="font-size: 15px;" > Email: 
+                    <a href="mailto:alx.whitecompany@gmail.com">alx.whitecompany@gmail.com</a> 
+                    Number:+7 92573383788
+                    <pre class="hiddendata" > </pre>
+                </p>
+
+                <form action="/action_page.php" class="form">
+                    <label for="personname"></label><br>
+                    <input type="text" id="personname" name="fname" value="Write your name here" onfocus="value='' ">
+                    <button class="bgo" onclick="document.getElementById('personmessage').style.display='block'" > > </button>
+                </form><br>
+
+                <form class="form" id="form2" style="display: none;">
+                    <label for="personmessage"></label><br>
+                    <input type="text" id="personmessage" name="lname" value="Doe" style="display: none;" ><br><br>
+                    <input type="submit" style="display:none ;">
+                </form> 
+                
+                
+           
+
+            </div>
+			
+			
+
+
+			
+
+		  
+		</div>
+
+
+
+    </header>
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+
+
+<!--the background changer-->
+        <script>
+            var images = ['https://drive.google.com/file/d/1Xkh9exFVNcXFxDT_6i3rkOenDlJCNcld/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1XlJCjuXcZEabDMQV3buBxIBbrX3lR4lN/view?usp=sharing', 
+                      /*    'https://drive.google.com/file/d/1Xm6Dwim0gzaq15HGRRYBFo1jZRPQL73f/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1XmvGiE9nsbHFZ4KJEpoMVATGVN9IAoqJ/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Xpong5ABFV9I-kTHsaN4_IYs8opjQFND/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Xq1CHWrqXA1aUTsFL_GlZVSQwjzACN3A/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Y5if7LCyDrMP9pKS-OuklPOj5tAX7R2g/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Y7xKZzABTa-b7SBR-i5pKbCd5-N9yHiM/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YE5qPvElMWo4rm1MMhgsN6DugxRaFe7V/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YFb56Af7D3H39obmAFMJ6NGF-TpwebUe/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YFrcr6sVcJN9iXKDa4XU6TKeG4gBG2Ic/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YGb6PxM4fjjWl2k9YH2LjblIVPyHD1I6/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YGs0Ed_gYDlSvjlq_c18E90tUmB89gPl/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YM6g0CI0RfyEA8yzhLQ8hB0fz2O30kxx/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YOTh15zUcqdorwCS1I3CQUu1IWbCgx_c/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YPmvTiwBYrQK-FaHXZcDwNy8kM2I4v_y/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YPrhpQRQ4y5_ADFbOnR4pFE2TOgRbwTG/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YRS_4UzA8Ade9ULhjnkcYO7afDIgl36L/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YRgH799M4dIhVZ-TsCr2Bu38SZsXTh7u/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YTUFdW_n0Uos0v-QPClYr72tJI0XSz6a/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YUIAxiBWPRzCrS1VyE63UN67HcnxOFMy/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YWSl5p1AYzK1wjmAVq36HNEgJ8nDhAKT/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YZBsf3Lh-BgU4XjdnWxz59YoLbiyd54m/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YZsCbhfkQQNQdkJECaIwqBwposyliySw/view?usp=sharing',
+                            'https://drive.google.com/file/d/1Ya1YPIqj7hshPmcYBGdY3x-DZr1wHFCI/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Ya7IbukptD9bduLWcUjYdGpGLRqJLjoM/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YijmtFJBWZmA1TOC31mJrvL523fPIY9H/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YkEOCC_Xn6Pma4N2dQGZqkeuvAdW4iWm/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YlMhf1kQ-pBWqBLzMaTCzI5XG_8oIKQi/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YnvwDaXI6TU77ZAfRQS-Hgr6S8Yh24hw/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YoOEkEhqys6VhK1Ph8LP_mMdUa_5h7Fn/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YoOJac_n42nI4cktBJf7fRxI9IJHw59-/view?usp=sharing',
+                            'https://drive.google.com/file/d/1YrG3yIUz_-qMJO3slLV3VQMh1GbD5kqt/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Yt0H5EvuQj5oECmJi4wW0N1KNH1OCuDd/view?usp=sharin', 
+                            'https://drive.google.com/file/d/1Yu6stJpqZgwK3d9gdHbyp6xBIkRVkTWE/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Yv1MHp15iDaSKeDJdJxX2urDSnxevtrY/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YwWNl7MqT1UN1ODk_UCJ4y3QC38jdAI4/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1YyYn6NeuUtCLr1PIDEaRL7VCWvxAe2Pa/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1Z1dcQMn5nIwUKUCybH-jxGghIgeQqIkj/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1cvYL3F__FjZFoo1DjOXwTyp03VVBgbdz/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1cxhXFHrtaaV-mtSaSkdx3L9dQB8ZdzgL/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1cxywauUYDSsIU-WWFKt57BEGmXhpHr73/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1d0NJS9Z4TjEbbEw4RnqGblihrARcJVQt/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1d29ZryFA_FMCfcnuUFHLhgY-G01v3G90/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1d2UVKYKDwPODoSQ9qCy5m-JOy6XUtXBd/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1d98-41bB6oeif8hjG3DSPziWeeux8LYv/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1dB3aFxTHZwIMEXrw7Wji3tXD2WKYCIzM/view?usp=sharing', 
+                            'https://drive.google.com/file/d/1dGpKEXm5GVKWePKWzNNroKajqKup5xC7/view?usp=sharing',  */
+                            'https://drive.google.com/file/d/1dH8gTMiC34MnS4LY98h0FLSz8twB3JGr/view?usp=sharing']; 
+
+            
+                            ('.header').css({'background-image': 'url(' + images[Math.floor(Math.random()* images.length)] + ')'});
+
+        </script>
+
+
+<!--the header-->
+        <script>
+
+        
+
+        </script>
+
+</body>
+</html>

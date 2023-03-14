@@ -36,10 +36,14 @@ body {
 	--backgroundcolor: #000000;
 	--animationspeed: 2s;
 	--colorTitle: var(--color1) ; 
-	--transparentbg: #202e3200; 
+	--transparentbg: hsla(193, 22%, 16%, 0); 
 
 	--color1:#dfdcb9; 
+	--color1trans: hsla(0, 0%, 100%, 0.5);
 	--color2:#586c5c; 
+
+	--bgimagerandom:url("fotos/milad-fakurian-PjG_SXDkpwQ-unsplash.jpg");
+	--myimage: url("fotos/yo.png") ;
 
 		
 }
@@ -86,9 +90,40 @@ li{
 
 }
 
+.menu{
+	margin-top: 1em; 
+	position: fixed; 
+	z-index: 4; ; 
+	/*top: 1em;
+	left: 43%;*/
+	margin-top: 2.5em;
+	text-decoration: none;
+
+}
+	#menu{
+		display: flex;
+		flex-direction: column;		
+		align-items: center;
+		text-align: center;
+		
+
+	}
+
 .page2{
 	width: 100%;
 	height: 100%;
 	background-color: var(--backgroundcolor);
 	color: var(--color1);
+	position: absolute;
+}
+
+.all{
+	width: inherit;
+	height: auto;
+	display: ;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
 }

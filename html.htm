@@ -209,16 +209,7 @@
 				
 			}
 
-	.menu{
-		margin-top: 1em; 
-		position: fixed; 
-		z-index: 4; ; 
-		/*top: 1em;
-		left: 43%;*/
-		margin-top: 2.5em;
-		text-decoration: none;
 
-	}
 
 	.hbuton{
 		color: var(--color2) ;
@@ -252,14 +243,7 @@
 			font-size: 1em;
 		}
 
-	#menu{
-		display: flex;
-		flex-direction: column;		
-		align-items: center;
-		text-align: center;
-		
 
-	}
 
 
 
@@ -271,6 +255,48 @@
 
 
 	
+</style>
+
+<!-- propiedades de page 2-->
+
+<style>
+
+	.intro{
+		margin-top: 16em;
+		margin-left: 16em;
+		margin-bottom: em;
+
+
+	}
+		.tit{
+			
+		}
+
+	.cuad1{
+		position: relative;
+		width: 20%;
+		height: 40%;
+		background-color: var(--color1);
+		left: 30%;
+		margin-top: 5em;
+		display: inline-block ;
+		opacity:0 ;
+		transform: translateY(10em);
+		animation: fadein 1s 7s forwards  ;
+	}
+	.cuad2{
+		position: relative;
+		width: 20%;
+		height: 40%;
+		background-color: var(--color1);
+		left: 40%;
+		margin-top: 5em;
+		display: inline-block ;
+		opacity:0 ;
+		transform: translateY(10em);
+		animation: fadein 1s 8s forwards  ;
+	}
+		
 </style>
 
 
@@ -286,9 +312,9 @@
 		<div class="header"> 
 			<div id="menu">
 				<ul class="menu" style="color:var(--colorTitle) ;">
-					<li>Home</li>
+					<li><a href="html.htm">Home</a></li>
 					<li>Studio</li>
-					<li>Contact</li>
+					<li ><a href="contact.html"> Contact</a></li>
 					<!--<li class="">Contact</li>-->
 				</ul>
 			</div>
@@ -307,7 +333,8 @@
 			<div class="holder">
 				<p><br><br><br><br><br><br><br><br><br><br><br><br></p>
 				<p id="time" style="position:  ;"></p>
-				<button class="hbuton" style="" > &#8893</button>
+				<button class="hbuton" style=""  >
+				<a href="#page2" style="text-decoration: none;color:inherit;" onclick="show()">&#8893</a></button>
 			</div>
 
 
@@ -326,14 +353,23 @@
 	  </header>
 
 	  	<!-- Here is  -->
-	  <div class="page2">
-		<h1 class="tit">Soy disenador grafico</h1>
+		<div class="all" style="display:none ;">
+			<div class="page2" id="page2" onmouseover="typed()">
+					<div class="raya" style="background-color: var(--color1); height:6em; "></div>
+
+					<div class="intro">
+						<h1 class="tit">Hola</h1>
+						<span id="element" style="color:var(--color1); "></span>
+					</div>
+
+					<div class="cuad1"></div>
+					<div class="cuad2"></div>
 
 
 
 
-	  </div>
-
+			</div>
+		</div>
 
 
 
@@ -558,6 +594,46 @@
 }
  				setInterval(refreshTime, 1000);
 				
+
+		</script>
+
+<!-- Page 2 anmimations 
+
+the letters-->
+
+		<script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+		<script>
+			/*
+			document.getElementById("page2").addEventListener("mouseover", mouse);*/
+
+					var typed = new Typed('#element', {
+						strings: ['<i>Ya</i> nos presentamos, vayamos al lio.', '&amp; a second sentence.'],
+						typeSpeed: 50,
+					});
+				
+		</script>
+
+
+	<!-- Setup and start animation! -->
+
+		<script>
+				(document).ready(function() {
+					('a[href^="#page2"]').click(function() {
+					var destino = (this.hash); //this.hash lee el atributo href de este
+					('html, body').animate({ scrollTop: destino.offset().top }, 700); //Llega a su destino con el tiempo deseado
+					return false;
+				});
+				});
+
+
+
+			function show()
+				{        
+					document.getElementById("all").style.display="block";
+				}
+
+
+
 
 		</script>
 
