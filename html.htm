@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="768px.css">
+	<link rel="stylesheet" media="screen and (min-width:769px) and (max-width: 1368px) " type="text/css" href="1024px.css">
 </head>
 
 
@@ -19,7 +21,7 @@
 		align-items: center;
 		text-align: center;
 	
-}
+    }
 		
 		
 
@@ -261,42 +263,148 @@
 
 <style>
 
-	.intro{
-		margin-top: 16em;
-		margin-left: 16em;
-		margin-bottom: em;
 
-
-	}
-		.tit{
-			
+		.background-image{
+			position: absolute;	
+			z-index: 0;
+			background: var(--bagpage2);
+			background-color: aliceblue;
+			background-size: cover;
+			filter: sepia(90%);
+			width: 100%;
+			height: 100%;
+			display: block;
+			opacity: 0.5;
 		}
 
-	.cuad1{
-		position: relative;
-		width: 20%;
-		height: 40%;
-		background-color: var(--color1);
-		left: 30%;
-		margin-top: 5em;
-		display: inline-block ;
-		opacity:0 ;
-		transform: translateY(10em);
-		animation: fadein 1s 7s forwards  ;
-	}
-	.cuad2{
-		position: relative;
-		width: 20%;
-		height: 40%;
-		background-color: var(--color1);
-		left: 40%;
-		margin-top: 5em;
-		display: inline-block ;
-		opacity:0 ;
-		transform: translateY(10em);
-		animation: fadein 1s 8s forwards  ;
-	}
-		
+			.intro{
+				margin-top: 10%;
+				margin-left: 20%;
+				margin-bottom: ;
+				text-align: center;
+				/*border: 1px solid red;*/
+				display:block;
+				position: absolute;
+				width: 17%;
+				align-items: center;
+				align-content: center;
+				place-content: center;
+
+			}
+				.tit{
+					font-size: px;
+					font-weight: 400;
+				}
+					#element{
+						font-size: 14px;
+					}
+				
+				.userhome{
+					margin-left: 4em;
+					padding: 0px;
+					margin-bottom: 1em;
+					position:relative;
+					
+				}
+
+/*
+				#user:hover{
+						animation: color 1ms steps(1) forwards;
+					} */
+
+					@keyframes color {
+						
+						to{
+							filter: grayscale(100%);
+						}
+					}
+
+			.cuad1{
+				position:relative;
+				width: 30%;
+				height: 50%;
+				background-color: var(--semitransparentbg);
+				left: 50%;
+				margin-top: 10em;
+				display: inline-block ;
+				border-radius: 50px;
+				opacity:0 ;
+				transform: translateY(10em);
+				animation: fadein 2s  forwards  ;
+				box-shadow: 0 4px 50px 10px var(--shadow1), 0 6px 50px 10px var(--shadow1);
+				/*-webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));*/
+
+				
+			}
+
+			.cuad2{
+				position: ;
+				width: 20%;
+				height: 40%;
+				background-color: var(--color1);
+				left: 40%;
+				margin-top: 5em;
+				display: none ;
+				opacity:0 ;
+				transform: translateY(10em);
+				animation: fadein 1s 8s forwards  ;
+			}
+
+				.tag1{
+					padding: 1em;
+					margin: 2em 1em 1em 3em;
+					background-color: var(--semitransparentbgwhite);
+					border: 0px solid var(--color1) ;
+					border-radius: 50px;
+					color: var(--color1);
+					font-weight: 500;
+				}
+					.tag1:hover{
+						background-color:var(--backgroundcolor) ;
+						color: var(--color1);
+						border: none;
+					}
+
+				.proyect{
+					/*border: 1px solid red;*/
+					width: auto;
+					height: 80%;
+					border-radius: 50px 50px 0px 0 ;
+					background: var(--imgproyect1) ;
+					background-size: cover;
+					
+					
+				}
+					.proytitle{
+						margin: 10px 0 0 30px;
+						padding: auto;
+						color: var(--color1);						
+						position: inherit;
+						display: inline-block;
+						width: 150px;
+						text-align: center;
+						
+					}
+
+						#verproyect{
+							border: 1px solid var(--color1);
+							font-size: 14px;
+							padding: 2px;
+							background-color: var(--color1trans);
+							border-radius: 10px;
+
+						}
+
+						.txtproyect{
+							padding: 1em 2em 1em 30px;
+							color: var(--textcolor);
+							font-size: 14px;
+							
+						}
+							#more {display: none;}
+
+
+				
 </style>
 
 
@@ -331,10 +439,10 @@
 				
 			</canvas>
 			<div class="holder">
-				<p><br><br><br><br><br><br><br><br><br><br><br><br></p>
+				<p id="wspace"><br><br><br><br><br><br><br><br><br><br><br><br></p>
 				<p id="time" style="position:  ;"></p>
 				<button class="hbuton" style=""  >
-				<a href="#page2" style="text-decoration: none;color:inherit;" onclick="show()">&#8893</a></button>
+				<a href="#page2" style="text-decoration: none;color:inherit;" onclick="document.getElementById('all').style.display='block' ">&#8893</a></button>
 			</div>
 
 
@@ -350,20 +458,37 @@
 		</div>
 
 
-	  </header>
+	</header>
 
-	  	<!-- Here is  -->
-		<div class="all" style="display:none ;">
+	<!-- Here is PAGE 2	 -->
+
+		<div class="all" style="display: ;">
 			<div class="page2" id="page2" onmouseover="typed()">
-					<div class="raya" style="background-color: var(--color1); height:6em; "></div>
+					<div class="background-image"></div>
+					<div class="raya" style="background-color: var(--backgroundcolor); height:6em;box-shadow: var(--box-shadow); z-index: 2; position: relative; opacity: 0.5; "></div>
 
 					<div class="intro">
+						<div id="user" class="userhome" style=""> </div>
 						<h1 class="tit">Hola</h1>
-						<span id="element" style="color:var(--color1); "></span>
+						<span id="element" style="color:var(--textcolor);margin-bottom: ; "></span>
+						<span style="padding: 10px;height:10px; display: block;"> 
+						</span>
+						
+						
 					</div>
 
-					<div class="cuad1"></div>
-					<div class="cuad2"></div>
+					<div class="cuad1">
+						<button class="tag1" style="position: absolute;"> Branding</button>
+						<div class="proyect" ></div>
+						<h3 class="proytitle"> NEWDAY Studio </h3> 
+						<h3 class="proytitle" id="verproyect"> Ver Proyecto</h3> 
+						<p class="txtproyect ">Lorem ipsum dolor sit amet, consectetur adipiscing 							elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span> <a onclick="" href="http://felixtumbarell.com" id="myBtn">Read more</a></p>
+
+              				
+
+
+					</div>
+					<div class="cuad2" style="display: none;" ></div>
 
 
 
@@ -607,7 +732,7 @@ the letters-->
 			document.getElementById("page2").addEventListener("mouseover", mouse);*/
 
 					var typed = new Typed('#element', {
-						strings: ['<i>Ya</i> nos presentamos, vayamos al lio.', '&amp; a second sentence.'],
+					strings: ['Soy diseñador gráfico y freelancer, especializado  en la creación y diseño de identidad corporativa, diseño de paginas web y diseño de materiales editoriales. Con mis conocimientos de marketing, branding, estudio de mercados puedo ayudarle a llevar su marca al próximo nivel.'/*, '&amp; a second sentence.'*/],
 						typeSpeed: 50,
 					});
 				
@@ -636,6 +761,30 @@ the letters-->
 
 
 		</script>
+
+	<!-- Setup and start animation! -->
+
+		<script>
+
+				function readmore() {
+				var dots = document.getElementById("dots");
+				var moreText = document.getElementById("more");
+				var btnText = document.getElementById("myBtn");
+
+				if (dots.style.display === "none") {
+					dots.style.display = "inline";
+					btnText.innerHTML = "Read more"; 
+					moreText.style.display = "none";
+				} else {
+					dots.style.display = "none";
+					btnText.innerHTML = "Read less"; 
+					moreText.style.display = "inline";
+				}
+				}
+
+	</script>
+
+
 
 
 

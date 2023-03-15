@@ -5,6 +5,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="768px.css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" type="text/css" href="1024px.css">
     <script>
      /*   function onLoadCallback () {            
             grecaptcha.render ('divRecaptcha',(
@@ -25,15 +27,23 @@
         background-size: cover;
         background-color: ;
         background-image:var(--bgimagerandom) ;
-        animation: bganima 30s steps(4) 2s alternate infinite ;
+        animation: bganima 10s steps(1) 2s infinite ;
     
     }
+    /*
         @keyframes bganima {
                      0%   { background-image: url('http://drive.google.com/uc?export=view&id=1Xkh9exFVNcXFxDT_6i3rkOenDlJCNcld') ; }
 					50%   { background-image: url('http://drive.google.com/uc?export=view&id=1YGb6PxM4fjjWl2k9YH2LjblIVPyHD1I6') ;}
 					75%   { background-image: url('http://drive.google.com/uc?export=view&id=1Ya7IbukptD9bduLWcUjYdGpGLRqJLjoM') ; }
 					100%  { background-image: url('http://drive.google.com/uc?export=view&id=1Y5if7LCyDrMP9pKS-OuklPOj5tAX7R2g') ;}
-        }
+        } */
+
+        @keyframes bganima {
+                     0%   { background-image: url('/fotos/blue.jpg') ; }
+					50%   { background-image: url('/fotos/black01.jpg') ;}
+					75%   { background-image: url('/fotos/black02.jpg') ; }
+					100%  { background-image: url('/fotos/black03.jpg') ;   }
+                }
 
         .user{
             position: absolute;
@@ -48,17 +58,7 @@
       
         }
 
-            #user{
-                height: 200px;
-                width: 200px;
-                background-color:#ecd799 ;
-                border-radius: 50%;
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-image: var(--myimage);
             
-    
-            }
 
             .nombre{
                 margin-top: 0.5em;
