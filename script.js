@@ -33,12 +33,16 @@ animateTitle();
 
 
 
-/* the typing effect */
+/* Supuestamente el captcha */
 
    
 
+    function successCallback(token) {
+        debugger;
+    }
 
 
 
 
+ /* Supuestamente el captcha */
   

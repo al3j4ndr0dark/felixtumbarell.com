@@ -5,6 +5,15 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+     /*   function onLoadCallback () {            
+            grecaptcha.render ('divRecaptcha',(
+            sitekey: '6LeYYO8gAAAAAF4_mLTx_G5GOLKeRdZKL-iOhTAx', 
+            callback: successCallback,
+        ))
+    }; */
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onLoadCallback&render=explicit"></script>
 </head>
 
 <style>
@@ -16,8 +25,15 @@
         background-size: cover;
         background-color: ;
         background-image:var(--bgimagerandom) ;
+        animation: bganima 30s steps(4) 2s alternate infinite ;
     
     }
+        @keyframes bganima {
+                     0%   { background-image: url('http://drive.google.com/uc?export=view&id=1Xkh9exFVNcXFxDT_6i3rkOenDlJCNcld') ; }
+					50%   { background-image: url('http://drive.google.com/uc?export=view&id=1YGb6PxM4fjjWl2k9YH2LjblIVPyHD1I6') ;}
+					75%   { background-image: url('http://drive.google.com/uc?export=view&id=1Ya7IbukptD9bduLWcUjYdGpGLRqJLjoM') ; }
+					100%  { background-image: url('http://drive.google.com/uc?export=view&id=1Y5if7LCyDrMP9pKS-OuklPOj5tAX7R2g') ;}
+        }
 
         .user{
             position: absolute;
@@ -57,10 +73,12 @@
                     display: none;
                 }
 
+
+  /* The f**** FORM  */
+
             .form{
                 height: 30px;
-                border-radius: 30px;           
-                
+                border-radius: 30px;
                 box-shadow: none;
                 border: 1px solid var(--color1);
                 display:flex;
@@ -71,21 +89,24 @@
                 .form:hover{
                         
                         border: none;
-                        background-color: var(--color1trans);
+                        /*background-color: var(--color1trans);*/
+                        border: 1px solid var(--backgroundcolor) ;
 
                     }
                 .form:focus{
                     border: none;
                 }
-                #personname:focus + .bgo{
-                    display: block;
-                    
-                }
+                    #personname:focus + .bgo{
+                        display: ;
+                        color: var(--backgroundcolor);
+                        
+                    }
 
-                #personname:focus + {
-                    display: block;
-                    
-                }
+
+                    #personname:hover + .intruccions{
+                        display: block;
+                        
+                    }
 
                 @keyframes form2 () {
                     to {
@@ -107,9 +128,25 @@
                         }
                        
                         #personname:hover,#personmessage:hover{
-                            color: var(--transparentbg);
+                            color: var(--color1);
 
                         }
+
+                        #personmessage:focus-within + .submit{
+                        display: block;
+                        
+                        
+                        }
+
+                        #personmessage{
+                           display:block;
+                           position: inherit;
+
+                        }
+                        
+                        
+
+
 
                         
                     .bgo{
@@ -117,13 +154,25 @@
                         height: 30px;
                         padding: 5px;
                         vertical-align: center;
-                        background-color: var(--color1);
-                        color: var(--backgroundcolor);
+                        background-color: var(--transparentbg);
+                        color: var(--color1);
                         display: none;
                     }
                         .bgo:hover{
                             background-color: var(--transparentbg);
                         }
+
+                    #intruccions {
+                        font-size: 14px;
+                        font-weight: 200;
+                        background-color: var(--transparentbg);
+                        box-shadow: none;
+                        border: none;
+                        color: var(--color1);
+
+                    }
+
+                    
                         
 
 </style>
@@ -134,7 +183,7 @@
 
  <body>
     <header>
-        <div class="header"> 
+        <div class="header" onload=""> 
 			<div id="menu">
 				<ul class="menu" style="color:var(--colorTitle) ;">
 					<li><a href="html.htm">Home</a></li>
@@ -148,7 +197,7 @@
 
                 <div id="user" style=""> </div>
 
-                <h2 class="nombre">Felix Tumbarell</h2><br>
+                <h2 class="nombre">Felix Tumbarell</h2>
 
                 <p class="data" style="font-size: 15px;" > Email: 
                     <a href="mailto:alx.whitecompany@gmail.com">alx.whitecompany@gmail.com</a> 
@@ -156,20 +205,37 @@
                     <pre class="hiddendata" > </pre>
                 </p>
 
-                <form action="/action_page.php" class="form">
+                <form action="mailto:a@a.com" method = "post" enctype = "text/plain" id="form" class="form" autocomplete="on">
                     <label for="personname"></label><br>
-                    <input type="text" id="personname" name="fname" value="Write your name here" onfocus="value='' ">
-                    <button class="bgo" onclick="document.getElementById('personmessage').style.display='block'" > > </button>
+                    <input type="email" id="personname" name="Email"  placeholder="Write your Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    <button class="bgo" onclick="document.getElementById('intruccions').style.display='block'" > &#9655 </button>
+                    
                 </form><br>
-
-                <form class="form" id="form2" style="display: none;">
+                
+                <form class="form" id="form2" style="display: ;" form="form">
                     <label for="personmessage"></label><br>
-                    <input type="text" id="personmessage" name="lname" value="Doe" style="display: none;" ><br><br>
-                    <input type="submit" style="display:none ;">
-                </form> 
+                    <input type="text" id="personmessage" class="personmessage" name="Message" placeholder="Your message goes here"size="25"  style="display: ;" form="form" >
+                    <br>
+                    
+                    <input type="submit" class="submit" style="display:none ;">
+                    
+                </form> <br> 
+                    <input type="hidden" id="subject" name="subject" value="Subject">                   
+
+                    <input type="submit" id="intruccions" class="intruccions" style="display: ;" value="Send a message " form="form" name="submit"><br>
+                    <div id="divRecaptcha" class="g-recaptcha" data-sitekey="6LeYYO8gAAAAAF4_mLTx_G5GOLKeRdZKL-iOhTAx" form="form" required>
+                    </div>
+
+                
+                    
+                
                 
                 
            
+
+            </div>
+
+            <div>
 
             </div>
 			
@@ -192,8 +258,10 @@
 
 <!--the background changer-->
         <script>
-            var images = ['https://drive.google.com/file/d/1Xkh9exFVNcXFxDT_6i3rkOenDlJCNcld/view?usp=sharing', 
-                            'https://drive.google.com/file/d/1XlJCjuXcZEabDMQV3buBxIBbrX3lR4lN/view?usp=sharing', 
+
+           function imageload(){
+            var images = ['1Xkh9exFVNcXFxDT_6i3rkOenDlJCNcld', 
+                            '1XlJCjuXcZEabDMQV3buBxIBbrX3lR4lN', 
                       /*    'https://drive.google.com/file/d/1Xm6Dwim0gzaq15HGRRYBFo1jZRPQL73f/view?usp=sharing', 
                             'https://drive.google.com/file/d/1XmvGiE9nsbHFZ4KJEpoMVATGVN9IAoqJ/view?usp=sharing', 
                             'https://drive.google.com/file/d/1Xpong5ABFV9I-kTHsaN4_IYs8opjQFND/view?usp=sharing', 
@@ -240,18 +308,18 @@
                             'https://drive.google.com/file/d/1d98-41bB6oeif8hjG3DSPziWeeux8LYv/view?usp=sharing', 
                             'https://drive.google.com/file/d/1dB3aFxTHZwIMEXrw7Wji3tXD2WKYCIzM/view?usp=sharing', 
                             'https://drive.google.com/file/d/1dGpKEXm5GVKWePKWzNNroKajqKup5xC7/view?usp=sharing',  */
-                            'https://drive.google.com/file/d/1dH8gTMiC34MnS4LY98h0FLSz8twB3JGr/view?usp=sharing']; 
+                            '1dH8gTMiC34MnS4LY98h0FLSz8twB3JGr']; 
 
             
-                            ('.header').css({'background-image': 'url(' + images[Math.floor(Math.random()* images.length)] + ')'});
-
+                            ('.header').css({'background-image': 'url(http://drive.google.com/uc?export=view&id=' + images[Math.floor(Math.random()* images.length)] + ')'});
+           }
         </script>
 
 
 <!--the header-->
         <script>
 
-        
+
 
         </script>
 

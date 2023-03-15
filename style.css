@@ -42,8 +42,12 @@ body {
 	--color1trans: hsla(0, 0%, 100%, 0.5);
 	--color2:#586c5c; 
 
-	--bgimagerandom:url("fotos/milad-fakurian-PjG_SXDkpwQ-unsplash.jpg");
+	--bgimagerandom:/*url("fotos/milad-fakurian-PjG_SXDkpwQ-unsplash.jpg")*/ var(--googledrive) ;
+	--googledrive: url('http://drive.google.com/uc?export=view&id=1cxhXFHrtaaV-mtSaSkdx3L9dQB8ZdzgL') ;
+
 	--myimage: url("fotos/yo.png") ;
+
+	--myemail:"mailto:tumbarell@vk.com"; 
 
 		
 }
