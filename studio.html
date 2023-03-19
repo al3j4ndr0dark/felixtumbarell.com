@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Felix Tumbarell</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="768px.css">
+    <link rel="stylesheet" media="screen and (max-width: 1024px)" type="text/css" href="1024px.css">
+   
+
+</head>
+
+<style>
+    .header{
+        width: 100%;
+        height: 100%;
+        position: ;
+
+   }
+        #element{
+            position:relative;
+            display:block;
+            border: none;
+            text-align: center;
+            font-size: 6em;
+            top: 3em;
+            margin-bottom: 6em;
+        }
+
+            .header span{
+                width: ;
+            }
+
+        
+</style>
+
+
+<style>
+/*  The Proyect Galery */
+
+
+    /* Create four equal columns that sits next to each other */
+    .row{
+        position: absolute;
+        width: 100%;
+    }
+    .column {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0%;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .column > .imgall {
+        background-color: #f1f1f1;
+        
+        min-width: ;
+        margin: 10px;
+        text-align: center;
+        line-height: 0px;
+        color: #ce7137;
+       
+    } 
+
+        .column div{
+            width: 50vh;
+            height: 50vh;
+        }
+
+        .imgall{
+            
+           
+        }
+
+        .imgall > img{
+            object-fit: cover;
+            display: block;
+            position: ;
+           
+        }    
+
+        #img11{
+            
+        }
+        
+
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 50%;
+        flex: 50%;
+        max-width: ;
+    }
+
+   
+    }
+
+    /* Responsive layout - makes the two columns stack on top of each other 
+    instead of next to each other */
+    @media screen and (max-width: 600px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+        justify-content: center;
+
+    }
+    }
+
+
+
+    /*  los overlays
+     */
+
+
+  
+
+            .overlay {
+                position: absolute; 
+                bottom: 0; 
+                background: rgb(0, 0, 0);
+                background: rgba(0, 0, 0, 0.5); /* Black see-through */
+                color: #f1f1f1; 
+                width: 50%;
+                transition: .5s ease;
+                opacity:1;
+                color: white;
+                font-size: 20px;
+                padding: 20px;
+                text-align: center;
+                border: 1px solid red;
+            }
+</style>
+
+
+
+
+<body>
+    <header class="header">
+        <div  onload=""> 
+			<div id="menu">
+				<ul class="menu" style="color:var(--colorTitle) ;">
+					<li><a href="felixtumbarell.com">Home</a></li>
+					<li><a href="studio.html">Studio</a></li>
+					<li ><a href="contact.html"> Contact</a></li>
+					<!--<li class="">Contact</li>-->
+				</ul>
+			</div>
+        </div>
+
+        
+            <span id="element" style="color:var(--color1);margin-bottom: ; "></span>
+        
+
+    </header>
+
+        
+    <div class="page2" style=" background-color:var(); padding: 1em; "> 
+        <div class="row">
+
+            <div class="column">
+                <div class="imgall" id="img11"> 
+                    <img src="/fotos/proyects/11.webp" width="100%" 
+                    style="background-color:white ; " onhover="img " >
+                    <span class="overlay">Proyecto 1
+                    </span> 
+                </div>
+
+                <div class="imgall">                    
+                    <img src="/fotos/proyects/10.webp" width="100%" 
+                        style="background-color:#9a9188; padding-bottom: em; ">
+                </div>
+
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/09.webp" width="100%"
+                    style="background-color:#e7e6e6; ">
+                </div>
+
+            
+
+            
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/08.webp" width="100%">
+                </div>
+
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/07.webp" width="100%"
+                    style="background-color:white ; ">
+                </div>
+
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/06.webp" width="100%"
+                    style="background-color:white ; ">
+                </div>
+
+           
+
+            
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/05.webp" width="100%"
+                    style="background-color:#ce7137 ; ">
+                </div>
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/04.webp" width="100%"
+                    style="background-color:#e01a18 ; ">
+                </div>
+            
+
+            
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/03.webp" width="100%"
+                    style="background-color:white ; ">
+                </div>
+                <div class="imgall"> 
+                    <img src="/fotos/proyects/02.webp" width="100%"
+                    style="background-color:white ; ">
+                </div>
+          
+
+        </div>
+    </div>  
+
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+
+<!-- 
+
+the letters-->
+
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script>
+        /*
+        document.getElementById("page2").addEventListener("mouseover", mouse);*/
+
+                var typed = new Typed('#element', {
+                strings: [' The STUDIO.'/*, '&amp; a second sentence.'*/],
+                    typeSpeed: 100,
+                });
+            
+    </script>
+
+
+</body>
+</html>

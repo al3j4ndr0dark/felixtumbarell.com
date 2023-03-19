@@ -8,12 +8,12 @@
     <link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="768px.css">
     <link rel="stylesheet" media="screen and (max-width: 1024px)" type="text/css" href="1024px.css">
     <script>
-     /*   function onLoadCallback () {            
+     function onLoadCallback () {            
             grecaptcha.render ('divRecaptcha',(
             sitekey: '6LeYYO8gAAAAAF4_mLTx_G5GOLKeRdZKL-iOhTAx', 
             callback: successCallback,
         ))
-    }; */
+    }; 
     </script>
     <script src="https://www.google.com/recaptcha/api.js?onload=onLoadCallback&render=explicit"></script>
 </head>
@@ -26,7 +26,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-color: ;
-        background-image:var(--bgimagerandom) ;
+        background-image:var(--bgimagerandom) ; 
         animation: bganima 10s steps(1) 2s infinite ;
     
     }
@@ -39,10 +39,10 @@
         } */
 
         @keyframes bganima {
-                     0%   { background-image: url('/fotos/blue.jpg') ; }
-					50%   { background-image: url('/fotos/black01.jpg') ;}
-					75%   { background-image: url('/fotos/black02.jpg') ; }
-					100%  { background-image: url('/fotos/black03.jpg') ;   }
+                     0%   { background-image: url('/fotos/blue.webp') ; }
+					50%   { background-image: url('/fotos/black01.webp') ;}
+					75%   { background-image: url('/fotos/black02.webp') ; }
+					100%  { background-image: url('/fotos/black03.webp') ;   }
                 }
 
         .user{
@@ -187,7 +187,7 @@
 			<div id="menu">
 				<ul class="menu" style="color:var(--colorTitle) ;">
 					<li><a href="html.htm">Home</a></li>
-					<li>Studio</li>
+					<li><a href="studio.html">Studio</a></li>
 					<li ><a href="contact.html"> Contact</a></li>
 					<!--<li class="">Contact</li>-->
 				</ul>
@@ -223,7 +223,7 @@
                     <input type="hidden" id="subject" name="subject" value="Subject">                   
 
                     <input type="submit" id="intruccions" class="intruccions" style="display: ;" value="Send a message " form="form" name="submit"><br>
-                    <div id="divRecaptcha" class="g-recaptcha" data-sitekey="6LeYYO8gAAAAAF4_mLTx_G5GOLKeRdZKL-iOhTAx" form="form" required>
+                    <div id="divRecaptcha" class="g-recaptcha" data-sitekey="" form="form" required>
                     </div>
 
                 

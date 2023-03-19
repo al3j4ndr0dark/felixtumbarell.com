@@ -48,13 +48,13 @@ body {
 
 	--bgimagerandom:/*url("fotos/milad-fakurian-PjG_SXDkpwQ-unsplash.jpg")*/ var(--googledrive) ;
 	--googledrive: url('http://drive.google.com/uc?export=view&id=1cxhXFHrtaaV-mtSaSkdx3L9dQB8ZdzgL') ;
-	--bagpage2: url('/fotos/color1.jpg') no-repeat center;
+	--bagpage2: url('/fotos/color1.webp') no-repeat center;
 
-	--myimage: url("fotos/yo.png") ;
+	--myimage: url("fotos/yo.webp") ;
 
 	--myemail:"mailto:tumbarell@vk.com"; 
 
-	--imgproyect1: url('/fotos/logo.png') no-repeat center;
+	--imgproyect1: url('/fotos/logo.webp') no-repeat center;
 	--colorproyect1:#6b54ea;
 	--colorproyect1trans: hsl(249, 73%, 67%);
 
@@ -69,6 +69,7 @@ body {
 	header{
 		top: ;
 		align-items: center;
+		
 		
 		
 		
@@ -149,8 +150,8 @@ body {
 	}
 
 		#user{
-			height: 200px;
-			width: 200px;
+			height: 25vh;
+			width: 25vh;
 			background-color:#ecd799 ;
 			border-radius: 50%;
 			background-repeat: no-repeat;
@@ -158,6 +159,17 @@ body {
 			background-image: var(--myimage);
 
 		}
+
+
+.footer{
+	background-color: var(--backgroundcolor);
+	height: 100px;
+	width: 100%;
+	position: ;
+}
+
+
+
 
 
 
@@ -220,13 +232,13 @@ body {
     }
 
         #user{
-            width: 50%;
+            width: 25vh;
             height: 25vh ;
 
 		}
 
         .userhome{
-            margin-left: 25%;
+            margin-left: 35%;
             
         }
 
@@ -236,7 +248,7 @@ body {
 
 
     .cuad1{
-        display: block;
+        display: flexbox;
         width: 80%;
         left: 10%;
         position: absolute;
@@ -244,26 +256,31 @@ body {
         place-content: center;
         align-content: center;
         align-items: center;
-        height: 80%;
-        margin-bottom: 2em;
+        height: 85%;
+        margin-bottom: 4em;
 
     }
 
         .proytitle{
             position: relative;
             display: block;
+			font-size: 0.8em;
         }
 
             #verproyect{
-                font-size: 14px;
+                font-size: 12px;
                 display: block;
             }
 
             .txtproyect{
-                font-size: 14px;
+                font-size: 12px;
             }
 
-
+			.proyect{
+				
+				height: 80%;
+			 }
+				
 
 
 
@@ -346,22 +363,22 @@ and (max-width: 1368px) {
             
         }
 
-        #element{
+        #element1{
             font-size: 20px;
             width: 50%;
         }
 
 
     .cuad1{
-        display: inline-block;
-        width: 30%;
-        left: 5%;
+        display:flexbox;
+        width: 40%;
+        left: 3%;
         position: relative;
-        margin-top: 15%;
+        margin-top: 10%;
         place-content: center;
         align-content: center;
         align-items: center;
-        height: 50%;
+        height: 70%;
         margin-bottom: 0;
 
     }
@@ -369,19 +386,24 @@ and (max-width: 1368px) {
         .proytitle{
             position: relative;
             display: block;
+			font-size: smaller;
         }
 
             #verproyect{
-                font-size: 14px;
+                font-size: 12px;
                 display: block;
-            }
+        }
+           
 
             .txtproyect{
-                font-size: 14px;
+                font-size: 12px;
+				display:flexbox;
             }
 
-
-
+			.proyect{
+				
+				height: 75%;
+			 }
 
 
 

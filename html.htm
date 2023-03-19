@@ -5,8 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" media="screen and (max-width: 768px)" type="text/css" href="768px.css">
-	<link rel="stylesheet" media="screen and (min-width:769px) and (max-width: 1368px) " type="text/css" href="1024px.css">
+	
 </head>
 
 
@@ -300,7 +299,7 @@
 					}
 				
 				.userhome{
-					margin-left: 4em;
+					margin-left: 15%;
 					padding: 0px;
 					margin-bottom: 1em;
 					position:relative;
@@ -322,15 +321,15 @@
 			.cuad1{
 				position:relative;
 				width: 30%;
-				height: 50%;
+				height: 60%;
 				background-color: var(--semitransparentbg);
 				left: 50%;
-				margin-top: 10em;
+				margin-top: 8em;
 				display: inline-block ;
 				border-radius: 50px;
 				opacity:0 ;
 				transform: translateY(10em);
-				animation: fadein 2s  forwards  ;
+				animation: fadein 2s 2s forwards  ;
 				box-shadow: 0 4px 50px 10px var(--shadow1), 0 6px 50px 10px var(--shadow1);
 				/*-webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.1));*/
 
@@ -340,7 +339,7 @@
 			.cuad2{
 				position: ;
 				width: 20%;
-				height: 40%;
+				height: 45%;
 				background-color: var(--color1);
 				left: 40%;
 				margin-top: 5em;
@@ -368,7 +367,7 @@
 				.proyect{
 					/*border: 1px solid red;*/
 					width: auto;
-					height: 80%;
+					height: 75%;
 					border-radius: 50px 50px 0px 0 ;
 					background: var(--imgproyect1) ;
 					background-size: cover;
@@ -420,8 +419,8 @@
 		<div class="header"> 
 			<div id="menu">
 				<ul class="menu" style="color:var(--colorTitle) ;">
-					<li><a href="html.htm">Home</a></li>
-					<li>Studio</li>
+					<li><a href="felixtumbarell.com">Home</a></li>
+					<li><a href="studio.html">Studio</a></li>
 					<li ><a href="contact.html"> Contact</a></li>
 					<!--<li class="">Contact</li>-->
 				</ul>
@@ -470,7 +469,7 @@
 					<div class="intro">
 						<div id="user" class="userhome" style=""> </div>
 						<h1 class="tit">Hola</h1>
-						<span id="element" style="color:var(--textcolor);margin-bottom: ; "></span>
+						<span id="element1" style="color:var(--textcolor);margin-bottom: ; "></span>
 						<span style="padding: 10px;height:10px; display: block;"> 
 						</span>
 						
@@ -482,19 +481,40 @@
 						<div class="proyect" ></div>
 						<h3 class="proytitle"> NEWDAY Studio </h3> 
 						<h3 class="proytitle" id="verproyect"> Ver Proyecto</h3> 
-						<p class="txtproyect ">Lorem ipsum dolor sit amet, consectetur adipiscing 							elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span> <a onclick="" href="http://felixtumbarell.com" id="myBtn">Read more</a></p>
+						<p class="txtproyect ">Lorem ipsum dolor sit amet, consectetur adipiscing 
+							elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem  
+							vitae<span id="dots">...</span><span id="more">erisque enim ligula 
+								venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor 
+								vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis 
+								dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc 
+								venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus 
+								gravida venenatis. Integer fringilla congue eros non fermentum. 
+								Sed dapibus pulvinar nibh tempor porta.</span> 
+							<a onclick="" href="http://felixtumbarell.com" id="myBtn" style="color:var(--color1) ;">Read more</a>
+						</p>
 
               				
 
 
 					</div>
-					<div class="cuad2" style="display: none;" ></div>
+					<div class="cuad2" style="display: none;" >
+					
+					</div>
 
 
 
 
 			</div>
 		</div>
+
+
+<!-- Here is footer -->
+	<footer>
+		<div class="footer" >
+
+		</div>
+
+	</footer>
 
 
 
@@ -679,16 +699,16 @@
 <!-- Here is where hare la funcion de la hora -->
 
 		<script>
-
+  
 			const hour = new Date().getHours(); 
 			let greeting;
-			if (8< hour < 12) {
+			if (8 < hour < 12) {
   			greeting = "Buenos dias";
 			}
 			if  (12< hour < 19) {
   			greeting = "Buen Dia";
 			}
-			else if(19< hour < 00) {
+			else if( hour > 22) {
   			greeting = "Buenas Noches";
 			}
 			
@@ -731,8 +751,8 @@ the letters-->
 			/*
 			document.getElementById("page2").addEventListener("mouseover", mouse);*/
 
-					var typed = new Typed('#element', {
-					strings: ['Soy diseñador gráfico y freelancer, especializado  en la creación y diseño de identidad corporativa, diseño de paginas web y diseño de materiales editoriales. Con mis conocimientos de marketing, branding, estudio de mercados puedo ayudarle a llevar su marca al próximo nivel.'/*, '&amp; a second sentence.'*/],
+					var typed = new Typed('#element1', {
+					strings: ['Soy diseñador gráfico y freelancer, especializado en la creación y diseño de identidad corporativa, diseño de paginas web y diseño de materiales editoriales. Con mis conocimientos de marketing, branding, estudio de mercados puedo ayudarle a llevar su marca al próximo nivel.'/*, '&amp; a second sentence.'*/],
 						typeSpeed: 50,
 					});
 				
@@ -745,7 +765,7 @@ the letters-->
 				(document).ready(function() {
 					('a[href^="#page2"]').click(function() {
 					var destino = (this.hash); //this.hash lee el atributo href de este
-					('html, body').animate({ scrollTop: destino.offset().top }, 700); //Llega a su destino con el tiempo deseado
+					('html, body').animate({ scrollTop: destino.offset().top }, 1500); //Llega a su destino con el tiempo deseado
 					return false;
 				});
 				});
@@ -782,7 +802,7 @@ the letters-->
 				}
 				}
 
-	</script>
+	    </script>
 
 
 
