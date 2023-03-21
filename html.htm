@@ -13,12 +13,10 @@
 <!-- This styles are for the letter effects -->
 <style>
 	.wrapped {
-		
 		font-size: 2em;
 		display: flex;
-		flex-direction: column;		
-		align-items: center;
 		text-align: center;
+		justify-content: center;
 	
     }
 		
@@ -28,15 +26,12 @@
 
 	.dinamic {
 		color: var(--colorTitle);
-		
-		align-content: center;
-		place-content: center ;	
 		position: absolute;
 		text-align: center;
 		/*outline: 2px solid red;*/
-		width: max-content;
 		text-transform: uppercase;
 		z-index: 4;
+		display: inline-block;
 		
 		
 	}
@@ -75,11 +70,7 @@
 					50%   {left: 100%; }
 					75%   {left: 100%; }
 					100%   {left: 100%; }
-					
-
-					
-
-				}}
+				}
 
 				@keyframes typereverse {
 				to {
@@ -182,10 +173,13 @@
 
 <style>
 
+@media screen and (min-width: 1369px)
+ {
+
 	.dinamic{
 		/*margin-top: 6em;
 		margin-left: 33%;*/
-		margin-top:6.2em;
+		margin-top:25%;
 		
 
 	}
@@ -202,13 +196,23 @@
 		/*margin-top: 15em;
 		margin-left: 43.3%;*/
 		font-weight: 300;
-		margin-top: 15em;
+		margin-top: 30%;
 		
 	}
 
 			.dinamic, .static {
 				
 			}
+
+
+
+
+
+
+	}
+
+
+
 
 
 
@@ -242,11 +246,9 @@
 		#time{
 			color: var(--color1);
 			font-size: 1em;
+			z-index: 7;
 		}
-
-
-
-
+		
 
 </style>
 
@@ -263,6 +265,11 @@
 <style>
 
 
+
+@media screen and (min-width: 1369px)
+ {
+
+
 		.background-image{
 			position: absolute;	
 			z-index: 0;
@@ -274,35 +281,41 @@
 			height: 100%;
 			display: block;
 			opacity: 0.5;
+			margin: 0;
+		padding: 0;
 		}
 
 			.intro{
-				margin-top: 10%;
-				margin-left: 20%;
-				margin-bottom: ;
 				text-align: center;
-				/*border: 1px solid red;*/
 				display:block;
-				position: absolute;
-				width: 17%;
-				align-items: center;
-				align-content: center;
-				place-content: center;
+				position: relative;
+				width: 40%;
+				justify-content: center;
+				float: left;
+				text-align: center;
+				height: 50%;
+				margin: 10% 0 0 5%;
+				padding: 0em 8em 0em 8em;
 
 			}
 				.tit{
-					font-size: px;
+					font-size: 25px;
 					font-weight: 400;
+					display: block;
 				}
-					#element{
-						font-size: 14px;
+					#element1{
+						font-size: 20px;
 					}
 				
+					.intro div{
+					display: inline-block;
+					}
+
 				.userhome{
-					margin-left: 15%;
+					position: relative;
 					padding: 0px;
 					margin-bottom: 1em;
-					position:relative;
+					
 					
 				}
 
@@ -320,12 +333,13 @@
 
 			.cuad1{
 				position:relative;
-				width: 30%;
+				float: right;
+				width: 40%;
+				margin-right: 5%;
 				height: 60%;
-				background-color: var(--semitransparentbg);
-				left: 50%;
+				background-color: var(--semitransparentbg);				
 				margin-top: 8em;
-				display: inline-block ;
+				display: block ;
 				border-radius: 50px;
 				opacity:0 ;
 				transform: translateY(10em);
@@ -350,6 +364,7 @@
 			}
 
 				.tag1{
+					width: 20%;
 					padding: 1em;
 					margin: 2em 1em 1em 3em;
 					background-color: var(--semitransparentbgwhite);
@@ -402,8 +417,8 @@
 						}
 							#more {display: none;}
 
+	}	
 
-				
 </style>
 
 
@@ -428,17 +443,18 @@
 			
 			<div class="wrapped">
 				<h1 class="dinamic" > 
-					<pre class="list" type="text" id="buenas"></pre>
+					<pre class="list" type="text" id="buenas" onload="time()" ></pre>
 				</h1>
 			</div>
 			<div id="static">
-				<h1 class="static"  >  Mi nombre es Felix </h1>
+				<h1 class="static" id="minombre" >  Mi nombre es Felix </h1>
+				
 			</div>
 			<canvas>
 				
 			</canvas>
 			<div class="holder">
-				<p id="wspace"><br><br><br><br><br><br><br><br><br><br><br><br></p>
+				<p id="wspace"></p>
 				<p id="time" style="position:  ;"></p>
 				<button class="hbuton" style=""  >
 				<a href="#page2" style="text-decoration: none;color:inherit;" onclick="document.getElementById('all').style.display='block' ">&#8893</a></button>
@@ -462,15 +478,15 @@
 	<!-- Here is PAGE 2	 -->
 
 		<div class="all" style="display: ;">
-			<div class="page2" id="page2" onmouseover="typed()">
+			<div class="page2" id="page2" >
 					<div class="background-image"></div>
-					<div class="raya" style="background-color: var(--backgroundcolor); height:6em;box-shadow: var(--box-shadow); z-index: 2; position: relative; opacity: 0.5; "></div>
+					<div class="raya" style="background-color: var(--backgroundcolor); height:6em;box-shadow: var(--box-shadow); z-index: 2; position: relative; opacity: 1; "></div>
 
 					<div class="intro">
-						<div id="user" class="userhome" style=""> </div>
-						<h1 class="tit">Hola</h1>
-						<span id="element1" style="color:var(--textcolor);margin-bottom: ; "></span>
+						<div id="user" class="userhome" style=""><p style="color: red;"></p> </div>
 						<span style="padding: 10px;height:10px; display: block;"> 
+						<span class="tit">Hola</span>
+						<span id="element1" style="color:var(--textcolor);margin-bottom: ; "></span>
 						</span>
 						
 						
@@ -497,6 +513,7 @@
 
 
 					</div>
+					
 					<div class="cuad2" style="display: none;" >
 					
 					</div>
@@ -696,49 +713,136 @@
 
 	</script>
 
-<!-- Here is where hare la funcion de la hora -->
+<!-- Here is where hare la funcion de las palabras de bienvenida -->
 
 		<script>
   
-			const hour = new Date().getHours(); 
-			let greeting;
-			if (8 < hour < 12) {
-  			greeting = "Buenos dias";
-			}
-			if  (12< hour < 19) {
-  			greeting = "Buen Dia";
-			}
-			else if( hour > 22) {
-  			greeting = "Buenas Noches";
-			}
-			
-			document.getElementById("buenas").innerHTML = greeting;
-			
-  	/*			if (new Date().getHours() < 18) {
-					document.getElementById("demo").innerHTML = "Good day!";
-					}
+  var day = "Unknown";
+  let language = navigator.language;
+				let dashIndex = language.indexOf('-');
+				if (dashIndex >= 0) {
+					language = language.substring(0, dashIndex);
+				}
 
-*/		
-			
-				function ment(f) {	 					
-  					return ("Hola")/*(new Date().getHours()) + (7)*/;
-				
-				};
-	
-				var mom = new Date().toLocaleTimeString();
-				
-				var datetime = new Date().toLocaleTimeString();
-				console.log(datetime); // it will represent date in the console of developers tool
-				document.getElementById("time").textContent = datetime; // represent on html page
+        		
+  switch (new Date().getHours()) {
+    case 20: case 21 :case 22 :case 23 :case 0 :case 1 :
+      day = "Buenas noches";
+      break;
+    case 2:case 3:case 4 :
+      day = "Es un poco tarde no?";
+      break;
+	  case 5 :case 6 :case 7 :
+      day = "Al que madruga...";
+      break;
+    case 8:case 9 :case 10 :case 11 :
+      day = "Buenos Dias";
+      break;
+    case 12:
+      day = "Justo a medio dia :)";
+      break;
+    case 13:case 14 :case 15 :
+      day = " Buen Dia";
+      break;
+    case  16 : case 17 : case 18 :case 19 :
+      day = "Buenas Tardes";
+      break;
+    default:
+      day = "Hola!";
+  }
 
-				function refreshTime() {
-				const timeDisplay = document.getElementById("time");
-				const dateString = new Date().toLocaleTimeString();
-				const formattedString = dateString.replace(", ", " - ");
-				timeDisplay.textContent = formattedString;
-}
- 				setInterval(refreshTime, 1000);
+	var dayen = " Hello";
+	switch (new Date().getHours()) {
+				case 20: case 21 :case 22 :case 23 :case 0 :case 1 :
+				dayen = "Good Night ";
+				break;
+				case 2:case 3:case 4 :
+				dayen = "a bit late, isn't it?";
+				break;
+				case 5 :case 6 :case 7 :
+				dayen = "The early bird...";
+				break;
+				case 8:case 9 :case 10 :case 11 :
+				dayen = "Good Morning";
+				break;
+				case 12:
+				dayen = "Just midday :)";
+				break;
+				case 13:case 14 :case 15 :
+				dayen = " Good day";
+				break;
+				case  16 : case 17 : case 18 :case 19 :
+				dayen = "Good afternoon";
+				break;
+				default:
+				dayen = "Hello!";
+			}
+
+	var german = " Hello";
+	switch (new Date().getHours()) {
+				case 20: case 21 :case 22 :case 23 :case 0 :case 1 :
+				german = "Guten Abend ";
+				break;
+				case 2:case 3:case 4 :
+				german = "ein bisschen spät, nein?";
+				break;
+				case 5 :case 6 :case 7 :
+				german = "Der frühe Vogel...";
+				break;
+				case 8:case 9 :case 10 :case 11 :
+				german = "Guten Morgen";
+				break;
+				case 12:
+				german = "gerade Mittag! :)";
+				break;
+				case 13:case 14 :case 15 :
+				german = " Guten Tag";
+				break;
+				case  16 : case 17 : case 18 :case 19 :
+				german = "Guten Tag";
+				break;
+				default:
+				german = "Hallo!";
+			}
+
+			
+			switch (language) {
+                case 'es' :
+                document.getElementById("minombre").innerText =  "Mi nombre es Felix ";
+                break; 
+				case 'en':
+                document.getElementById("minombre").innerText =  "My Name is Felix "; 
+				break; 
+				case 'ru':
+                document.getElementById("minombre").innerText =  "Я Felix "; 
+				break; 
+				case 'de':
+                document.getElementById("minombre").innerText =  "Mein Name ist Felix "; 
+				break; 
+				case 'zh':
+                document.getElementById("minombre").innerText =  "我的名字是菲利克斯";             
+                }
+
+			switch (language) {
+				case 'es' :
+				document.getElementById("buenas").innerHTML =  day;
+				break;
+				default :
+				document.getElementById("buenas").innerHTML =  dayen;
+				}
+
+
+		</script>
+
+		<script>
+			 	
 				
+
+				let time = d.toLocaleTimeString();
+				document.getElementById("time").innerHTML = time;
+				
+
+			
 
 		</script>
 
